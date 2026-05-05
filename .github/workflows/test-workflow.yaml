@@ -1,0 +1,26 @@
+---
+name: My testing workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  my-job:
+    if: github.server_url == 'https://github.com' && github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
+    steps:
+      - name: Conditional exit based on timestamp
+        run: |
+          # Even seconds = Success (0), Odd seconds = Failure (1)
+          exit $(( $(date +%s) % 2 ))
