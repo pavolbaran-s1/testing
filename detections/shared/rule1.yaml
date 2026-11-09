@@ -1,5 +1,5 @@
 id: rule1
-name: Suspicious PowerShell Download Cradle
+name: Test update Suspicious PowerShell Download Cradle
 description: Detects PowerShell commands commonly used to download and execute remote payloads
 severity: High
 expirationMode: Permanent
