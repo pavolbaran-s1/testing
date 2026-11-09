@@ -1,18 +1,11 @@
-mgmtUri: https://<place-holder>.sentinelone.net
+mgmtUri: https://usea1-validation-k8s-02.sentinelone.net
 tokenSecret: DAC_API_TOKEN_DEV
 
 targets:
-  site-rules:
-    scopeId: "<place-holder>"
-    scopeLevel: site
   account-rules:
-    scopeId: "<place-holder>"
+    scopeId: "2438554442270774422"
     scopeLevel: account
 
 deploy:
-  site-rules:
-    - "events/*.yaml"
-    - "correlation/*.yaml"
-    - "scheduled/*.yaml"
   account-rules:
     - "shared/*.yaml"
